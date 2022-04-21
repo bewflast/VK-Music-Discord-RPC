@@ -19,9 +19,10 @@ int main()
 	while (true) 
 	{
 		Sleep(2500);
-		if (client->GetCurrentAudio() != cur_audio)
+		std::string upd_audio = client->GetCurrentAudio();
+		if (upd_audio != cur_audio)
 		{
-			cur_audio = client->GetCurrentAudio();
+			cur_audio = upd_audio;
 			client->UpdateAudioInfo(cur_audio);
 			discord_RPC->update(client->GetAudioInfo());
 		}
