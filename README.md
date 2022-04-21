@@ -9,3 +9,9 @@
 3) Правильно указал значения в файле src/main.cpp (там, где комменты)
 
 Тебе понадобится зарегистрировать свое приложение в [портале разработчиков Discord](https://discord.com/developers/applications), получить его Application ID и вписать в соответствующую строку файла src/main.cpp
+
+P.S Пока что не удалось найти способа вытягивать обложки треков из тех аудиозаписей, которые пользователь слушает из "добавленного".
+То-есть, если ты перешел на страницу исполнителя и слушаешь его композиции оттуда, либо же какой-нибудь альбом(не плейлист!!!), то обложки будут высвечиваться, в противном случае будет сетаться лого ВК(долго оч объяснять)
+
+![](https://images-ext-2.discordapp.net/external/4l9jZW8Ba_uoKzs1w7biIJ04qStOLAKHiHGQqmlhqcw/https/i.imgur.com/UIPCwVs.png)
+![](https://images-ext-1.discordapp.net/external/Zbua700ekW6rLSaz4AhfocBVGna2CqB_8Lx7rJ2Hgaw/https/i.imgur.com/nr4bzMk.png)
