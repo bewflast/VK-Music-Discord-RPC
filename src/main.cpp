@@ -4,15 +4,15 @@
 
 int main()
 {
-	const char* rpc_client_id;
+	const char* rpc_app_id;
 	const char* vk_page;
 	DRPC*		discord_RPC;
 	CURLClient* client;
 	std::string cur_audio;
 	 
 	vk_page = ""; // url to your vk page (e.g https://vk.com/durov)
-	rpc_client_id = ""; //client id of your app (e.g 961721607396193104)
-	discord_RPC = new DRPC(rpc_client_id);
+	rpc_app_id = ""; //client id of your app (e.g 961721607396193104)
+	discord_RPC = new DRPC(rpc_app_id);
 	client = new CURLClient(vk_page);
 	cur_audio = "a";
 
