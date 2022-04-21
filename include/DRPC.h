@@ -3,8 +3,9 @@
 
 # include <discord_register.h>
 # include <discord_rpc.h>
-# include <iostream>
 # include <CURLClient.h>
+# include <iostream>
+# include <ctime>
 
 class DRPC
 {

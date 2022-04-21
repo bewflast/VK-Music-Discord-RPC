@@ -14,6 +14,7 @@ void DRPC::update(t_audioInfo info)
 	this->presence->largeImageKey = info.cover.c_str();
 	this->presence->state = info.artist.c_str();
 	this->presence->details = info.title.c_str();
+	this->presence->startTimestamp = std::time(nullptr);
 	Discord_UpdatePresence(this->presence);
 }
 
