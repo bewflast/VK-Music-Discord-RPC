@@ -28,6 +28,17 @@ static std::string cp1251_to_utf8(const char* str)
 	return res;
 }
 
+static std::string get_track_info(std::string html)
+{
+	std::size_t t_info_start;
+	std::size_t t_info_end; 
+
+	for (t_info_end = html.find("\"profile_info profile_info_short"); !(html[t_info_end] == 'a' && html[t_info_end - 1] == '/' && html[t_info_end - 2] == '<'); t_info_end--);
+	for (t_info_start = t_info_end - 3; html[t_info_start] != '>'; t_info_start--);
+
+	return (cp1251_to_utf8(html.substr(t_info_start + 1, t_info_end - t_info_start - 3).c_str()));
+}
+
 std::size_t	curl_write(char* data, size_t size, size_t nmemb, std::string* buffer)
 {
 	size_t result = 0;
@@ -85,8 +96,6 @@ bool CURLClient::isValidAudio(std::string html)
 
 void	CURLClient::UpdateAudioInfo(std::string audio_link)
 {
-	std::size_t track_info_pos;
-	std::size_t	track_info_end_pos;
 	std::size_t delim_pos;
 	std::string track_info;
 	std::string artist;
@@ -101,10 +110,7 @@ void	CURLClient::UpdateAudioInfo(std::string audio_link)
 
 	delim_pos = 0;
 	html = this->getHTML(this->vk_page);
-
-	track_info_pos = html.find("class=\"current_audio_icon\"></span>") + 34;
-	for (track_info_end_pos = track_info_pos; html[track_info_end_pos] != '\n'; track_info_end_pos++);
-	track_info = cp1251_to_utf8(html.substr(track_info_pos, track_info_end_pos - track_info_pos).c_str());
+	track_info = get_track_info(html);
 
 	for (auto c : track_info)
 		if ((int)c != -30)
