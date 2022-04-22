@@ -1,4 +1,4 @@
-#include <CURLClient.h>
+#include "CURLClient.h"
 #include <string>
 
 static std::string cp1251_to_utf8(const char* str)
@@ -130,6 +130,7 @@ std::string	CURLClient::GetCurrentAudio()
 	std::string	audio_link;
 
 	html = this->getHTML(this->vk_page);
+    std::cout << html;
 	audio_link_pos = html.find("data-audio=");
 	audio_link = "\0";
 
