@@ -10,8 +10,8 @@ int main()
 	CURLClient* client;
 	std::string cur_audio;
 	 
-	vk_page = "https://vk.com/cartishit"; // url to your vk page (e.g https://vk.com/durov)
-	rpc_app_id = "961771627996143706"; //client id of your app (e.g 961721607396193104)
+	vk_page = ""; // url to your vk page (e.g https://vk.com/durov)
+	rpc_app_id = ""; //client id of your app (e.g 961721607396193104)
 	discord_RPC = new DRPC(rpc_app_id);
 	client = new CURLClient(vk_page);
 	cur_audio = "a";
@@ -20,7 +20,6 @@ int main()
 	{
 		Sleep(2500);
 		std::string upd_audio = client->GetCurrentAudio();
-        std::cout << cur_audio << std::endl;
 		if (upd_audio != cur_audio)
 		{
 			cur_audio = upd_audio;

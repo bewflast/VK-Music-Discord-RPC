@@ -130,7 +130,6 @@ std::string	CURLClient::GetCurrentAudio()
 	std::string	audio_link;
 
 	html = this->getHTML(this->vk_page);
-    std::cout << html;
 	audio_link_pos = html.find("data-audio=");
 	audio_link = "\0";
 
