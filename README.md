@@ -6,7 +6,7 @@
 Перед использованием убедись, что ты:
 1) Включил отображение прослушиваемого тобою трека в статусе
 2) Разрешил неавторизованным пользователям просматривать твою страницу
-3) Правильно указал значения в файле src/main.cpp (там, где комменты)
+
 
 Тебе понадобится зарегистрировать свое приложение в [портале разработчиков Discord](https://discord.com/developers/applications), получить его Application ID и вписать в соответствующую строку файла src/main.cpp
 
@@ -15,3 +15,10 @@ P.S Пока что не удалось найти способа вытягив
 
 ![](https://images-ext-2.discordapp.net/external/4l9jZW8Ba_uoKzs1w7biIJ04qStOLAKHiHGQqmlhqcw/https/i.imgur.com/UIPCwVs.png)
 ![](https://images-ext-1.discordapp.net/external/Zbua700ekW6rLSaz4AhfocBVGna2CqB_8Lx7rJ2Hgaw/https/i.imgur.com/nr4bzMk.png)
+
+
+# Установка:
+1) Склонировать репозиторий, распаковать подмодули
+2) Запустить compile.bat
+3) После компиляции запустить vdiscord.exe файл по пути build32/Release
+4) Следовать инструкции
