@@ -12,8 +12,8 @@ int main()
 	 
 	std::cout << "Input url to your VK page: ";
 	std::cin >> vk_page;
-	std::cout << std::endl <<"Input your RPC Client ID: ";
-	std::cin >> rpc_app_id;
+	
+	rpc_app_id = "961771627996143706";
 
 	discord_RPC = new DRPC(rpc_app_id.c_str());
 	client = new CURLClient(vk_page.c_str());
