@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(zaloopa)
+project(VkRPC)
 
 set(CMAKE_CXX_STANDARD 17)
 
