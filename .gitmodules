@@ -1,3 +1,6 @@
 [submodule "curl"]
 	path = curl
 	url = https://github.com/curl/curl.git
+[submodule "discord-rpc"]
+	path = discord-rpc
+	url = https://github.com/bewflast/discord-rpc.git
