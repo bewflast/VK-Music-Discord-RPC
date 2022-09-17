@@ -147,7 +147,7 @@ std::string CURLClient::GetAlbumCover(std::string url)
 
 	html = this->getHTML(("https://vk.com/audio" + url).c_str());
 
-	if (!this->isValidAudio(html))
+	if (!this->isValidAudio(html) || url[0] != '-')
 	{
 		std::cout << "Failed to fetch track's cover image! Setting VK's logo." << std::endl;
 		return ("https://buzurdgkp2mzur.ru/images/stories/vk.png");
