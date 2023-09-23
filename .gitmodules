@@ -1,6 +1,6 @@
-[submodule "curl"]
-	path = curl
-	url = https://github.com/curl/curl.git
-[submodule "discord-rpc"]
-	path = discord-rpc
-	url = https://github.com/bewflast/discord-rpc.git
+[submodule "ext-libs/curl"]
+	path = ext-libs/curl
+	url = https://github.com/curl/curl
+[submodule "ext-libs/discord-rpc"]
+	path = ext-libs/discord-rpc
+	url = https://github.com/bewflast/discord-rpc/

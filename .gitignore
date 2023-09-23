@@ -1,2 +1,4 @@
 build32
 .vscode
+.idea
+cmake-build-debug
