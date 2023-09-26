@@ -1,9 +1,8 @@
-#ifndef DRPC_H
-#define DRPC_H
+#pragma once
 
 # include <discord_register.h>
 # include <discord_rpc.h>
-# include "CURLClient.h"
+# include <CURLClient.h>
 # include <iostream>
 # include <ctime>
 
@@ -20,5 +19,3 @@ class DRPC
 		void update(t_audioInfo info);
 
 };
-
-#endif 

@@ -105,6 +105,7 @@ void	CURLClient::UpdateAudioInfo(std::string audio_link)
 	if (!audio_link[0])
 	{
 		this->SetAudioInfo("Listens nothing", "Idle", "https://buzurdgkp2mzur.ru/images/stories/vk.png");
+
 		return;
 	}
 
@@ -132,7 +133,6 @@ std::string	CURLClient::GetCurrentAudio()
 	html = this->getHTML(this->vk_page);
 	audio_link_pos = html.find("data-audio=");
 	audio_link = "\0";
-
 	if (this->isListeningAudio(audio_link_pos, html))
 		audio_link = html.substr(audio_link_pos + 12, html.find("\" data-live=") - audio_link_pos - 12);
 

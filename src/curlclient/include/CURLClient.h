@@ -1,7 +1,5 @@
-#ifndef CURLCLIENT_H
-#define CURLCLIENT_H
+#pragma once
 
-# define CURL_STATICLIB
 # include <curl/curl.h>
 # include <iostream>
 
@@ -37,7 +35,3 @@ class CURLClient
 		void			UpdateAudioInfo(std::string audio_link);
 
 };
-
-
-#endif
-
